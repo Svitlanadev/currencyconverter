@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 def convert(base=None, to=None, amount=None):
     currency = base + to
-    response = req.get('https://api.finage.co.uk/last/forex/'+currency+'?apikey=API_KEY2bdqbZFgkKEQHAVbg5qmGhZnJ40ygskmr3v1Uft70UJEZk')
+    response = req.get('https://api.finage.co.uk/last/forex/'+currency+'?apikey=YOUR_API_KEY')
     body = json.loads(response.text)
     koef = body["bid"]
     result = int(amount) * koef
